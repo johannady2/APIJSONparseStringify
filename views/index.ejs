@@ -15,9 +15,7 @@
     <button type="submit" value="fish" name="choice">🐟</button>
   </form>
   <div id="recipeContainer" class="hidden">
-
-    <!-- If no recipe yet, show: -->
-        
+ 
     <% if (locals.protein) { %>
       <h2><%= protein.split(",")[0] %> Taco</h2>
       <h3>Ingredients:</h3>
@@ -30,16 +28,9 @@
         <% }) %>
       </ul>
 
-
-
     <% } else { %>
       <h2>Pick your favourite taco ingredient 👆</h2>
     <% } %>
-
-    
-
-
-
 
     </ul>
 
