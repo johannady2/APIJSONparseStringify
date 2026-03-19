@@ -20,25 +20,20 @@
         
     <% if (locals.protein) { %>
       <h2><%= protein.split(",")[0] %> taco</h2>
-      <h3>Ingredients:</h3>
-      <ul id="ingredientsList">
-        <li><%= protein %></li>
-        <li><%= salsa %></li>
-
-        <% toppings.forEach(function(topp) { %>
-          <li><%= topp %></li>
-        <% }) %>
-      </ul>
-
-
-
     <% } else { %>
       <h2>Pick your favourite taco ingredient 👆</h2>
     <% } %>
 
-    
+    <h3>Ingredients:</h3>
 
+    <ul id="ingredientsList">
+      <li><%= protein %></li>
+      <li><%= salsa %></li>
 
+      <% toppings.forEach(function(topp) { %>
+        <li><%= topp %></li>
+      <% }) %>
+    </ul>
 
 
     </ul>
