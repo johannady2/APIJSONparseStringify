@@ -21,13 +21,16 @@
     <!-- Else, show the recipe name e.g. <h2>Recipe name</h2>-->
 
     <h3>Ingredients:</h3>
+
+
     <ul id="ingredientsList">
-      <li>Protein name, protein preparation</li>
-      <li>Salsa name</li>
-      <li>Every other topping</li>
+      <li><%= protein %></li>
+      <li><%= salsa %></li>
+     <% toppings.forEach(function(topp)
+        {%>
+        <li><%= topp %></li>
+        <%});%>
     </ul>
-
-
 
   </div>
 </body>
