@@ -17,13 +17,7 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-const checkUserChoice = (req,res,next) =>
-{
-  req.choice = req.body.choice; // store it
-  console.log(`user choice: ${req.choice}`);
-  next();
 
-}
 //app.use(checkUserChoice);
 
 const getJSONData = (clickedChoice) =>
@@ -80,9 +74,9 @@ const getJSONData = (clickedChoice) =>
       
 }
 
-app.post("/recipe", checkUserChoice, (req, res) => {
+app.post("/recipe", (req, res) => {
   //Step 3: Write your code here to make this behave like the solution website.
-    const data = getJSONData(req.choice);
+    const data = getJSONData(req.body.choice);
     res.render("index.ejs", data);
   
 
